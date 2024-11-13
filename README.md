@@ -18,8 +18,8 @@ The repository contains the following folders and files:
 │   ├── household_members.csv  # 500 rows from the household_members table in MySQL
 │   ├── households.csv         # 500 rows from the households table in MySQL
 ├── Database_Schema_Diagram    # The schema diagram of the PostgreSQL database
-├── notebook.ipynb             # Jupyter Notebook containing code and function descriptions
-└── README.md                  # Project description and details (this file)
+├── README.md                  # Project description and details (this file)
+└── project.ipynb              # Jupyter Notebook containing code and function descriptions            
 ```
 # Detailed Description
 
