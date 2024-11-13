@@ -5,18 +5,18 @@ This project involves transferring a MySQL dataset into a PostgreSQL database us
 The repository contains the following folders and files:
 ```
 /project_directory
-├── /original_data
-│   ├── expenditures.csv       # 500 rows from the expenditures table in MySQL
-│   ├── household_members.csv  # 500 rows from the household_members table in MySQL
-│   ├── households.csv         # 500 rows from the households table in MySQL
-├── /final_data
-│   ├── households_final_data.csv         # 500 rows after insertion into PostgreSQL
-│   ├── expenditures_final_data.csv       # 9 rows after insertion into PostgreSQL
-│   ├── household_members_final_data.csv  # 292 rows after insertion into PostgreSQL
 ├── /ddl_info
 │   ├── expenditures_DDL.png   # DDL screenshot of expenditures table from MySQL
 │   ├── household_members_DDL.png  # DDL screenshot of household_members table from MySQL
 │   ├── households_DDL.png     # DDL screenshot of households table from MySQL
+├── /final_data
+│   ├── households_final_data.csv         # 500 rows after insertion into PostgreSQL
+│   ├── expenditures_final_data.csv       # 9 rows after insertion into PostgreSQL
+│   ├── household_members_final_data.csv  # 292 rows after insertion into PostgreSQL
+├── /original_data
+│   ├── expenditures.csv       # 500 rows from the expenditures table in MySQL
+│   ├── household_members.csv  # 500 rows from the household_members table in MySQL
+│   ├── households.csv         # 500 rows from the households table in MySQL
 ├── Database_Schema_Diagram    # The schema diagram of the PostgreSQL database
 ├── notebook.ipynb             # Jupyter Notebook containing code and function descriptions
 └── README.md                  # Project description and details (this file)
