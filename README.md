@@ -81,6 +81,19 @@ Since I only imported a partial dataset (500 rows) from each table, some rows ma
 Based on project requirements, I decided to remove these rows with missing references in foreign key columns rather than modify the referenced table. This ensures data integrity without introducing incomplete references.
 I also made sure to insert rows into referenced tables first (e.g., households) before inserting into referencing tables (e.g., household_members and expenditures) to satisfy foreign key constraints.
 
+### Migration of all data from three tables 
+But if you want to migrate all data from all three tables succesfully, then you need to write queries again and do some modifications in python script too so that you have only the HOUSEHOLD_ID values in the other two referencing tables(EXPENDITURES, HOUSEHOLD_MEMBERS) that are refereced from the HOUSEHOLD table. 
+```sql
+SELECT * from HOUSEHOLDS ORDER BY HOUSEHOLD_ID LIMIT 500;
+
+WITH HOUSEHOLD AS (
+select HOUSEHOLD_ID from HOUSEHOLDS ORDER BY HOUSEHOLD_ID LIMIT 500)
+SELECT * FROM EXPENDITURES WHERE HOUSEHOLD_ID IN (SELECT HOUSEHOLD_ID FROM HOUSEHOLD) LIMIT 500;
+
+WITH HOUSEHOLD AS (
+select HOUSEHOLD_ID from HOUSEHOLDS ORDER BY HOUSEHOLD_ID LIMIT 500)
+SELECT * FROM HOUSEHOLD_MEMBERS WHERE HOUSEHOLD_ID IN (SELECT HOUSEHOLD_ID FROM HOUSEHOLD) LIMIT 500;
+```
 ### Function-Based Code Structure:
 To make this process more reproducible, I organized the code into functions, allowing others to easily follow and reuse the steps by simply calling the respective functions.
 Detailed explanations of each step are included within the Jupyter Notebook for additional guidance.
