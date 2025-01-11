@@ -47,6 +47,7 @@ The following functions are implemented in the Jupyter notebook to help automate
 
 # Dataset
 I found the dataset used in this project on [Relational Data's Consumer Expenditures Dataset](https://relational-data.org/dataset/ConsumerExpenditures), which contains multiple tables. This allowed me to practice database design and migration across different database management systems.
+The dataset I used is from [this](https://relational.fel.cvut.cz/dataset/ConsumerExpenditures).
 
 # Project Steps
 ### Dataset Acquisition:
